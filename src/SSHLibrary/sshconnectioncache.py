@@ -18,5 +18,4 @@ class SSHConnectionCache(ConnectionCache):
         connection.close()
         if connection.config.alias is not None:
             self.aliases.pop(connection.config.alias)
-        self.connections.remove(connection)
         self.current = self._no_current
